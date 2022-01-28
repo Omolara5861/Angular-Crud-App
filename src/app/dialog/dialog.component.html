@@ -1,0 +1,45 @@
+<h1 mat-dialog-title>Add new Employer</h1>
+<div mat-dialog-content>
+  <mat-form-field appearance="outline">
+    <mat-label>Employer's Name</mat-label>
+    <input matInput placeholder="Placeholder" />
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Department</mat-label>
+    <mat-select name="department">
+        <mat-option value="" selected> Programming</mat-option>
+      <mat-option value=""> Customer Service</mat-option>
+      <mat-option>Product Management</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Start Date</mat-label>
+    <input matInput [matDatepicker]="picker">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+
+  <label id="example-radio-group-label">Gender</label>
+  <mat-radio-group aria-label="Select an option">
+    <mat-radio-button value="male">Male</mat-radio-button>
+    <mat-radio-button value="female">Female</mat-radio-button>
+  </mat-radio-group>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Salary</mat-label>
+    <input type="number" matInput placeholder="Placeholder" />
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Bio</mat-label>
+    <input matInput placeholder="Placeholder"/>
+  </mat-form-field>
+
+  <div mat-dialog-actions [align]="'end'">
+    <button mat-raised-button color="warn">Cancel</button>
+    <button mat-raised-button color="accent">Save</button>
+  </div>
+</div>
+
